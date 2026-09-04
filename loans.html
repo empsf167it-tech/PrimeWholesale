@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wholesale Meat Catalog — PRIME Wholesale Meats (Beef, Pork, Mutton, Chicken, Fish &amp; Rabbit)</title>
+  <meta name="description"
+    content="Browse our complete B2B wholesale meat catalog: USDA Prime Beef, Heritage Pork, Farm Mutton, Free-Range Chicken, Ocean Fish, and Dressed Farm Rabbit. Bulk pricing &amp; cold-chain logistics.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..800&family=IBM+Plex+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('prime-meat-theme');
+        var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', stored || (dark ? 'dark' : 'light'));
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="PRIME Wholesale Meats">
+        <img class="brand__logo" src="assets/images/prime-wholesale-logo.svg" alt="PRIME Wholesale Meats" width="220" height="48">
+      </a>
+
+      <nav class="nav" id="primaryNav" aria-label="Primary Navigation">
+        <button class="nav__close" id="navClose" type="button" aria-label="Close menu">
+          <i class="ph ph-x" aria-hidden="true"></i>
+        </button>
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link is-active" href="products.html" aria-current="page">Wholesale Catalog</a></li>
+          <li><a class="nav__link" href="calculator.html">Bulk Calculator</a></li>
+          <li><a class="nav__link" href="about.html">About &amp; Cold-Chain</a></li>
+          <li><a class="nav__link" href="contact.html">B2B Contact</a></li>
+        </ul>
+        <div class="nav__drawer-actions">
+          <div class="nav__drawer-theme">
+            <span>Appearance</span>
+            <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">
+              <i class="ph ph-sun" aria-hidden="true"></i>
+              <i class="ph ph-moon" aria-hidden="true"></i>
+            </button>
+          </div>
+          <a class="btn btn--primary btn--block" href="login.html">Buyer Login</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">
+          <i class="ph ph-sun" aria-hidden="true"></i>
+          <i class="ph ph-moon" aria-hidden="true"></i>
+        </button>
+        <a class="btn btn--primary btn--sm" href="login.html">Buyer Portal</a>
+        <button class="hamburger" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false"
+          aria-controls="primaryNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-backdrop" id="navBackdrop" hidden></div>
+
+  <main id="main">
+    <section class="section page-head">
+      <div class="container text-center">
+        <span class="eyebrow"><i class="ph ph-package" aria-hidden="true"></i> B2B Wholesale Supply Catalog</span>
+        <h1 class="page-head__title">Commercial Meats, Seafood &amp; Game Cuts</h1>
+        <p class="lead">Select a protein line to inspect cut specifications, minimum order quantities (MOQ), tier discounts, and cold storage specifications.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        
+        <!-- Protein Filter Tags -->
+        <div class="protein-tags justify-center" id="productFilterTags">
+          <button class="protein-pill is-active" data-filter="all" type="button">
+            <i class="ph ph-squares-four" aria-hidden="true"></i> All Products
+          </button>
+          <button class="protein-pill" data-filter="beef" type="button">
+            🥩 Prime Beef
+          </button>
+          <button class="protein-pill" data-filter="pork" type="button">
+            🐖 Heritage Pork
+          </button>
+          <button class="protein-pill" data-filter="mutton" type="button">
+            🐑 Mutton &amp; Lamb
+          </button>
+          <button class="protein-pill" data-filter="chicken" type="button">
+            🐓 Free-Range Chicken
+          </button>
+          <button class="protein-pill" data-filter="fish" type="button">
+            🐟 Ocean Fish
+          </button>
+          <button class="protein-pill" data-filter="rabbit" type="button">
+            🐇 Dressed Rabbit
+          </button>
+        </div>
+
+        <!-- Catalog Product Grid -->
+        <div class="grid grid--3" id="productCatalogGrid">
+          
+          <!-- 1. WAGYU RIBEYE (BEEF) -->
+          <article class="category-card" data-category="beef">
+            <img class="category-card__img" src="assets/images/category-beef.jpg" alt="A5 Wagyu Beef Ribeye Cut">
+            <div class="category-card__content">
+              <span class="eyebrow" style="color:var(--c-accent);">BEEF · JAPANESE A5 / USDA PRIME</span>
+              <h3 class="category-card__title">A5 Wagyu &amp; Prime Ribeye Primal</h3>
+              <p class="category-card__cuts">High marbling score BMS 8-11. Lip-on ribeye roast, vacuum sealed whole subprimal.</p>
+              <div class="badge-meat-group">
+                <span class="moq-badge">MOQ: 25 KG</span>
+                <span class="temp-badge">Chilled -2°C</span>
+              </div>
+              <div style="margin-top:var(--s-4); display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-family:var(--font-mono); font-weight:800; font-size:1.2rem; color:var(--c-primary);">$28.50 / kg</span>
+                <a class="btn btn--primary btn--sm" href="product-detail.html?item=wagyu-ribeye">View Specs</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. ANGUS STRIPLOIN (BEEF) -->
+          <article class="category-card" data-category="beef">
+            <img class="category-card__img" src="assets/images/category-beef.jpg" alt="USDA Prime Angus Striploin Cut">
+            <div class="category-card__content">
+              <span class="eyebrow" style="color:var(--c-accent);">BEEF · USDA CHOICE / PRIME</span>
+              <h3 class="category-card__title">USDA Prime Angus Striploin</h3>
+              <p class="category-card__cuts">Center-cut New York strip subprimal. Aged 21 days dry, trimmed 0.25" fat cap.</p>
+              <div class="badge-meat-group">
+                <span class="moq-badge">MOQ: 50 KG</span>
+                <span class="temp-badge">Chilled -2°C</span>
+              </div>
+              <div style="margin-top:var(--s-4); display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-family:var(--font-mono); font-weight:800; font-size:1.2rem; color:var(--c-primary);">$16.80 / kg</span>
+                <a class="btn btn--primary btn--sm" href="product-detail.html?item=angus-striploin">View Specs</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. HERITAGE PORK LOIN (PORK) -->
+          <article class="category-card" data-category="pork">
+            <img class="category-card__img" src="assets/images/category-pork.jpg" alt="Heritage Pork Loin Slab">
+            <div class="category-card__content">
+              <span class="eyebrow" style="color:var(--c-accent);">PORK · HERITAGE BERKSHIRE</span>
+              <h3 class="category-card__title">Whole Heritage Pork Loin Slab</h3>
+              <p class="category-card__cuts">Boneless whole pork loin, exceptionally juicy &amp; tender, ideal for portioned chops.</p>
+              <div class="badge-meat-group">
+                <span class="moq-badge">MOQ: 50 KG</span>
+                <span class="temp-badge">Vacuum Sealed</span>
+              </div>
+              <div style="margin-top:var(--s-4); display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-family:var(--font-mono); font-weight:800; font-size:1.2rem; color:var(--c-primary);">$8.80 / kg</span>
+                <a class="btn btn--primary btn--sm" href="product-detail.html?item=pork-loin">View Specs</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. PORK BELLY (PORK) -->
+          <article class="category-card" data-category="pork">
+            <img class="category-card__img" src="assets/images/category-pork.jpg" alt="Pork Belly Slab">
+            <div class="category-card__content">
+              <span class="eyebrow" style="color:var(--c-accent);">PORK · COMMERCIAL BULK</span>
+              <h3 class="category-card__title">Skin-On Crispy Pork Belly Slab</h3>
+              <p class="category-card__cuts">Rind-on pork belly slab for roasting or bacon smoking, uniform thickness &amp; lean ratio.</p>
+              <div class="badge-meat-group">
+                <span class="moq-badge">MOQ: 40 KG</span>
+                <span class="temp-badge">Frozen -18°C</span>
+              </div>
+              <div style="margin-top:var(--s-4); display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-family:var(--font-mono); font-weight:800; font-size:1.2rem; color:var(--c-primary);">$9.50 / kg</span>
+                <a class="btn btn--primary btn--sm" href="product-detail.html?item=pork-belly">View Specs</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. RACK OF LAMB & MUTTON (MUTTON) -->
+          <article class="category-card" data-category="mutton">
+            <img class="category-card__img" src="assets/images/category-mutton.jpg" alt="Rack of Lamb and Mutton Chops">
+            <div class="category-card__content">
+              <span class="eyebrow" style="color:var(--c-accent);">MUTTON · FARM FRESH</span>
+              <h3 class="category-card__title">French Trimmed Rack of Lamb / Mutton</h3>
+              <p class="category-card__cuts">8-rib French trimmed racks, tender grass-fed pasture raised, deep crimson flavor.</p>
+              <div class="badge-meat-group">
+                <span class="moq-badge">MOQ: 30 KG</span>
+                <span class="temp-badge">Chilled -2°C</span>
+              </div>
+              <div style="margin-top:var(--s-4); display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-family:var(--font-mono); font-weight:800; font-size:1.2rem; color:var(--c-primary);">$13.20 / kg</span>
+                <a class="btn btn--primary btn--sm" href="product-detail.html?item=mutton-rack">View Specs</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. MUTTON LEG BONE-IN (MUTTON) -->
+          <article class="category-card" data-category="mutton">
+            <img class="category-card__img" src="assets/images/category-mutton.jpg" alt="Whole Bone-In Mutton Leg">
+            <div class="category-card__content">
+              <span class="eyebrow" style="color:var(--c-accent);">MUTTON · PASTURE RAISED</span>
+              <h3 class="category-card__title">Whole Bone-In Mutton Leg Cut</h3>
+              <p class="category-card__cuts">Whole hind leg of mature farm mutton, ideal for slow roasting, stews, and braising.</p>
+              <div class="badge-meat-group">
+                <span class="moq-badge">MOQ: 35 KG</span>
+                <span class="temp-badge">Frozen -18°C</span>
+              </div>
+              <div style="margin-top:var(--s-4); display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-family:var(--font-mono); font-weight:800; font-size:1.2rem; color:var(--c-primary);">$12.00 / kg</span>
+                <a class="btn btn--primary btn--sm" href="product-detail.html?item=mutton-leg">View Specs</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. FREE RANGE CHICKEN (CHICKEN) -->
+          <article class="category-card" data-category="chicken">
+            <img class="category-card__img" src="assets/images/category-chicken.jpg" alt="Free-Range Dressed Whole Chicken">
+            <div class="category-card__content">
+              <span class="eyebrow" style="color:var(--c-accent);">POULTRY · AIR-CHILLED</span>
+              <h3 class="category-card__title">Whole Dressed Free-Range Chicken</h3>
+              <p class="category-card__cuts">Grade A air-chilled whole broilers without giblets (WOG), 1.2kg - 1.6kg average weight.</p>
+              <div class="badge-meat-group">
+                <span class="moq-badge">MOQ: 100 KG</span>
+                <span class="temp-badge">Chilled / IQF</span>
+              </div>
+              <div style="margin-top:var(--s-4); display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-family:var(--font-mono); font-weight:800; font-size:1.2rem; color:var(--c-primary);">$4.60 / kg</span>
+                <a class="btn btn--primary btn--sm" href="product-detail.html?item=whole-chicken">View Specs</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8. CHICKEN BREAST (CHICKEN) -->
+          <article class="category-card" data-category="chicken">
+            <img class="category-card__img" src="assets/images/category-chicken.jpg" alt="Boneless Chicken Breasts">
+            <div class="category-card__content">
+              <span class="eyebrow" style="color:var(--c-accent);">POULTRY · BONELESS SKINLESS</span>
+              <h3 class="category-card__title">Boneless Skinless Chicken Breast Box</h3>
+              <p class="category-card__cuts">Hand-trimmed single lobe chicken breast fillets, zero added water, 10kg master cartons.</p>
+              <div class="badge-meat-group">
+                <span class="moq-badge">MOQ: 80 KG</span>
+                <span class="temp-badge">Vacuum Sealed</span>
+              </div>
+              <div style="margin-top:var(--s-4); display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-family:var(--font-mono); font-weight:800; font-size:1.2rem; color:var(--c-primary);">$5.20 / kg</span>
+                <a class="btn btn--primary btn--sm" href="product-detail.html?item=chicken-breast">View Specs</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9. ATLANTIC SALMON (FISH) -->
+          <article class="category-card" data-category="fish">
+            <img class="category-card__img" src="assets/images/category-fish.jpg" alt="Fresh Atlantic Salmon Fillets">
+            <div class="category-card__content">
+              <span class="eyebrow" style="color:var(--c-accent);">SEAFOOD · OCEAN FRESH</span>
+              <h3 class="category-card__title">Fresh Atlantic Salmon Fillets (Trim D)</h3>
+              <p class="category-card__cuts">Sashimi-grade skin-on salmon fillets, pin bone out, vibrant omega-3 rich marbling.</p>
+              <div class="badge-meat-group">
+                <span class="moq-badge">MOQ: 25 KG</span>
+                <span class="temp-badge">Iced Fresh</span>
+              </div>
+              <div style="margin-top:var(--s-4); display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-family:var(--font-mono); font-weight:800; font-size:1.2rem; color:var(--c-primary);">$16.00 / kg</span>
+                <a class="btn btn--primary btn--sm" href="product-detail.html?item=atlantic-salmon">View Specs</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10. TUNA LOIN (FISH) -->
+          <article class="category-card" data-category="fish">
+            <img class="category-card__img" src="assets/images/category-fish.jpg" alt="Yellowfin Tuna Loin Block">
+            <div class="category-card__content">
+              <span class="eyebrow" style="color:var(--c-accent);">SEAFOOD · SASHIMI GRADE</span>
+              <h3 class="category-card__title">Yellowfin Tuna Loin Saku Block</h3>
+              <p class="category-card__cuts">CO-treated AAA sashimi quality tuna loin block, rich ruby red color retention.</p>
+              <div class="badge-meat-group">
+                <span class="moq-badge">MOQ: 20 KG</span>
+                <span class="temp-badge">Super-Frozen (-50°C)</span>
+              </div>
+              <div style="margin-top:var(--s-4); display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-family:var(--font-mono); font-weight:800; font-size:1.2rem; color:var(--c-primary);">$18.50 / kg</span>
+                <a class="btn btn--primary btn--sm" href="product-detail.html?item=tuna-loin">View Specs</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 11. DRESSED RABBIT (RABBIT) -->
+          <article class="category-card" data-category="rabbit">
+            <img class="category-card__img" src="assets/images/category-rabbit.jpg" alt="Dressed Whole Farm Rabbit">
+            <div class="category-card__content">
+              <span class="eyebrow" style="color:var(--c-accent);">SPECIALTY GAME · FARM RAISED</span>
+              <h3 class="category-card__title">Whole Dressed Farm Rabbit</h3>
+              <p class="category-card__cuts">Grain-fed young farm rabbit, head-off dressed carcass, 1.1kg - 1.4kg average weight.</p>
+              <div class="badge-meat-group">
+                <span class="moq-badge">MOQ: 20 KG</span>
+                <span class="temp-badge">Vacuum Frozen</span>
+              </div>
+              <div style="margin-top:var(--s-4); display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-family:var(--font-mono); font-weight:800; font-size:1.2rem; color:var(--c-primary);">$15.50 / kg</span>
+                <a class="btn btn--primary btn--sm" href="product-detail.html?item=whole-rabbit">View Specs</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 12. RABBIT SADDLE (RABBIT) -->
+          <article class="category-card" data-category="rabbit">
+            <img class="category-card__img" src="assets/images/category-rabbit.jpg" alt="Boneless Rabbit Saddle Cut">
+            <div class="category-card__content">
+              <span class="eyebrow" style="color:var(--c-accent);">SPECIALTY GAME · FINE DINING</span>
+              <h3 class="category-card__title">Boneless Rabbit Saddle &amp; Loin Cut</h3>
+              <p class="category-card__cuts">Precision deboned rabbit saddle portions for gourmet galantines and ballotines.</p>
+              <div class="badge-meat-group">
+                <span class="moq-badge">MOQ: 15 KG</span>
+                <span class="temp-badge">Vacuum Sealed</span>
+              </div>
+              <div style="margin-top:var(--s-4); display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-family:var(--font-mono); font-weight:800; font-size:1.2rem; color:var(--c-primary);">$17.00 / kg</span>
+                <a class="btn btn--primary btn--sm" href="product-detail.html?item=rabbit-saddle">View Specs</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> PRIME Wholesale Meats &amp; Provisions Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

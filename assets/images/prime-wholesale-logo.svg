@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="280" height="60">
+  <defs>
+    <linearGradient id="primeGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4A359" />
+      <stop offset="50%" stop-color="#F3E5AB" />
+      <stop offset="100%" stop-color="#C58B2B" />
+    </linearGradient>
+    <linearGradient id="primeRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B1825" />
+      <stop offset="100%" stop-color="#540A12" />
+    </linearGradient>
+  </defs>
+
+  <!-- Logo Mark Crest -->
+  <g transform="translate(6, 4)">
+    <!-- Crest Shield Background -->
+    <path d="M 26 2 L 46 10 L 46 32 C 46 44 26 50 26 50 C 26 50 6 44 6 32 L 6 10 Z" fill="url(#primeRed)" stroke="url(#primeGold)" stroke-width="2"/>
+    
+    <!-- Cleaver & Knife Cross Graphic -->
+    <path d="M 18 16 L 34 32" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 34 16 L 18 32" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 26 12 L 26 36" stroke="url(#primeGold)" stroke-width="1.8" stroke-dasharray="2 2"/>
+
+    <!-- Center Star -->
+    <polygon points="26,20 27.5,23 31,23.5 28.5,26 29,29.5 26,28 23,29.5 23.5,26 21,23.5 24.5,23" fill="url(#primeGold)" />
+  </g>
+
+  <!-- Brand Typography -->
+  <g transform="translate(64, 0)">
+    <!-- "PRIME" Title -->
+    <text x="0" y="31" font-family="'Fraunces', 'Georgia', serif" font-weight="900" font-size="24" letter-spacing="2" fill="currentColor" class="logo-title">
+      PRIME
+    </text>
+    
+    <!-- Gold Tag Badge -->
+    <rect x="94" y="14" width="92" height="18" rx="4" fill="url(#primeRed)" stroke="url(#primeGold)" stroke-width="1" />
+    <text x="140" y="27" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="9" letter-spacing="1.5" fill="#FFFFFF" text-anchor="middle">
+      WHOLESALE
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="47" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="9.5" letter-spacing="2.5" fill="url(#primeGold)" class="logo-subtitle">
+      MEATS &amp; PROVISIONS
+    </text>
+  </g>
+</svg>

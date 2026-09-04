@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>B2B Wholesale Inquiry &amp; Quote Request — PRIME Wholesale Meats</title>
+  <meta name="description"
+    content="Request a commercial wholesale meat quote, sample shipment, or set up a business supply contract for Pork, Beef, Mutton, Chicken, Fish, and Rabbit with PRIME Wholesale Meats.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..800&family=IBM+Plex+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('prime-meat-theme');
+        var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', stored || (dark ? 'dark' : 'light'));
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="PRIME Wholesale Meats">
+        <img class="brand__logo" src="assets/images/prime-wholesale-logo.svg" alt="PRIME Wholesale Meats" width="220" height="48">
+      </a>
+
+      <nav class="nav" id="primaryNav" aria-label="Primary Navigation">
+        <button class="nav__close" id="navClose" type="button" aria-label="Close menu">
+          <i class="ph ph-x" aria-hidden="true"></i>
+        </button>
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link" href="products.html">Wholesale Catalog</a></li>
+          <li><a class="nav__link" href="calculator.html">Bulk Calculator</a></li>
+          <li><a class="nav__link" href="about.html">About &amp; Cold-Chain</a></li>
+          <li><a class="nav__link is-active" href="contact.html" aria-current="page">B2B Contact</a></li>
+        </ul>
+        <div class="nav__drawer-actions">
+          <a class="btn btn--primary btn--block" href="login.html">Buyer Login</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">
+          <i class="ph ph-sun" aria-hidden="true"></i>
+          <i class="ph ph-moon" aria-hidden="true"></i>
+        </button>
+        <a class="btn btn--primary btn--sm" href="login.html">Buyer Portal</a>
+        <button class="hamburger" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false"
+          aria-controls="primaryNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-backdrop" id="navBackdrop" hidden></div>
+
+  <main id="main">
+    <section class="section page-head">
+      <div class="container text-center">
+        <span class="eyebrow"><i class="ph ph-headset" aria-hidden="true"></i> B2B Wholesale Department</span>
+        <h1 class="page-head__title">Request Wholesale Quote &amp; Sample Box</h1>
+        <p class="lead">Connect with a dedicated meat &amp; seafood account manager. We respond to all commercial quote requests within 2 business hours.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="grid grid--2">
+          
+          <!-- FORM -->
+          <div class="card" style="padding:var(--s-8);">
+            <h3 style="font-family:var(--font-display); margin-bottom:var(--s-6);">Commercial Quote &amp; Inquiry Form</h3>
+            
+            <div id="contactSuccess" class="alert alert--success" style="display:none; margin-bottom:var(--s-4);">
+              <i class="ph ph-check-circle" aria-hidden="true"></i> Thank you! Your wholesale inquiry has been dispatched. A commercial account representative will contact you shortly.
+            </div>
+
+            <form id="contactForm" novalidate>
+              <div class="field" style="margin-bottom:var(--s-4);">
+                <label for="contactName">Full Name / Purchasing Manager</label>
+                <input type="text" id="contactName" class="field__input" placeholder="e.g. Chef Marcus Vance" required>
+                <span class="field__msg"></span>
+              </div>
+
+              <div class="field" style="margin-bottom:var(--s-4);">
+                <label for="contactEmail">Business Email Address</label>
+                <input type="email" id="contactEmail" class="field__input" placeholder="purchasing@restaurant.com" required>
+                <span class="field__msg"></span>
+              </div>
+
+              <div class="field" style="margin-bottom:var(--s-4);">
+                <label for="contactPhone">Contact Phone Number</label>
+                <input type="tel" id="contactPhone" class="field__input" placeholder="+1 (555) 019-2831">
+                <span class="field__msg"></span>
+              </div>
+
+              <div class="field" style="margin-bottom:var(--s-4);">
+                <label for="contactTopic">Primary Protein Line Interest</label>
+                <select id="contactTopic" class="field__input" required>
+                  <option value="" disabled selected>Select protein category...</option>
+                  <option value="beef">🥩 USDA Prime Beef</option>
+                  <option value="pork">🐖 Heritage Pork</option>
+                  <option value="mutton">🐑 Farm Mutton &amp; Lamb</option>
+                  <option value="chicken">🐓 Free-Range Chicken</option>
+                  <option value="fish">🐟 Ocean Fish &amp; Seafood</option>
+                  <option value="rabbit">🐇 Dressed Farm Rabbit</option>
+                  <option value="mixed">📦 Mixed Container Order</option>
+                </select>
+                <span class="field__msg"></span>
+              </div>
+
+              <div class="field" style="margin-bottom:var(--s-6);">
+                <label for="contactMessage">Estimated Weight &amp; Custom Cut Requirements</label>
+                <textarea id="contactMessage" class="field__input" rows="4" placeholder="Detail your monthly volume estimates, trim specifications, or sample box request..."></textarea>
+                <span class="field__msg"></span>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--block">
+                Submit Wholesale Inquiry <i class="ph ph-paper-plane-tilt" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+
+          <!-- DIRECT HOTLINE & LOGISTICS HUBS -->
+          <div>
+            <div class="card" style="padding:var(--s-8); margin-bottom:var(--s-6); background:var(--surface-alt);">
+              <h3 style="font-family:var(--font-display); margin-bottom:var(--s-4);"><i class="ph ph-phone-call" style="color:var(--c-primary);" aria-hidden="true"></i> Commercial Emergency Hotline</h3>
+              <p style="margin-bottom:var(--s-4); font-size:var(--fs-sm);">Need immediate order modification or same-day cold-chain dispatch?</p>
+              <div style="font-family:var(--font-mono); font-weight:800; font-size:1.4rem; color:var(--c-primary); margin-bottom:var(--s-2);">
+                +1 (800) 555-MEAT
+              </div>
+              <p style="font-size:var(--fs-xs); color:var(--muted);">Mon - Fri: 5:00 AM - 8:00 PM CST | Sat: 6:00 AM - 4:00 PM CST</p>
+            </div>
+
+            <div class="card" style="padding:var(--s-8);">
+              <h3 style="font-family:var(--font-display); margin-bottom:var(--s-4);"><i class="ph ph-map-pin" style="color:var(--c-accent);" aria-hidden="true"></i> Central Distribution Hub</h3>
+              <address style="font-style:normal; line-height:1.8; font-size:var(--fs-sm);">
+                <strong>PRIME Wholesale Meats &amp; Provisions</strong><br>
+                1200 Cold Chain Logistics Parkway, Gate 4<br>
+                Chicago, IL 60609<br>
+                <strong>Email:</strong> wholesale@primemeats.example<br>
+                <strong>Sample Dept:</strong> samples@primemeats.example
+              </address>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> PRIME Wholesale Meats &amp; Provisions Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

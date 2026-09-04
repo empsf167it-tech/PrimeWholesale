@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us &amp; Cold Storage Logistics — PRIME Wholesale Meats</title>
+  <meta name="description"
+    content="Learn about PRIME Wholesale Meats: our 45,000 sq ft cold storage facility, direct farm contracting for Pork, Beef, Mutton, Chicken, Fish &amp; Rabbit, USDA inspection, and master butcher team.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..800&family=IBM+Plex+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('prime-meat-theme');
+        var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', stored || (dark ? 'dark' : 'light'));
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="PRIME Wholesale Meats">
+        <img class="brand__logo" src="assets/images/prime-wholesale-logo.svg" alt="PRIME Wholesale Meats" width="220" height="48">
+      </a>
+
+      <nav class="nav" id="primaryNav" aria-label="Primary Navigation">
+        <button class="nav__close" id="navClose" type="button" aria-label="Close menu">
+          <i class="ph ph-x" aria-hidden="true"></i>
+        </button>
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link" href="products.html">Wholesale Catalog</a></li>
+          <li><a class="nav__link" href="calculator.html">Bulk Calculator</a></li>
+          <li><a class="nav__link is-active" href="about.html" aria-current="page">About &amp; Cold-Chain</a></li>
+          <li><a class="nav__link" href="contact.html">B2B Contact</a></li>
+        </ul>
+        <div class="nav__drawer-actions">
+          <a class="btn btn--primary btn--block" href="login.html">Buyer Login</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">
+          <i class="ph ph-sun" aria-hidden="true"></i>
+          <i class="ph ph-moon" aria-hidden="true"></i>
+        </button>
+        <a class="btn btn--primary btn--sm" href="login.html">Buyer Portal</a>
+        <button class="hamburger" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false"
+          aria-controls="primaryNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-backdrop" id="navBackdrop" hidden></div>
+
+  <main id="main">
+    <section class="section page-head">
+      <div class="container text-center">
+        <span class="eyebrow"><i class="ph ph-buildings" aria-hidden="true"></i> Established 1994 · B2B Wholesale Supplier</span>
+        <h1 class="page-head__title">Uncompromising Quality &amp; Cold-Chain Excellence</h1>
+        <p class="lead">For over 30 years, PRIME Wholesale Meats has been the trusted bulk supplier of Pork, Beef, Mutton, Chicken, Fish, and Specialty Rabbit for premium dining establishments and retail chains.</p>
+      </div>
+    </section>
+
+    <!-- FACILITY OVERVIEW -->
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="grid grid--2" style="align-items:center;">
+          <div>
+            <span class="eyebrow" style="color:var(--c-accent);">COLD STORAGE DEPOT</span>
+            <h2 style="font-family:var(--font-display); margin-bottom:var(--s-4);">45,000 Sq Ft Climate-Controlled Facility</h2>
+            <p style="margin-bottom:var(--s-4); line-height:1.7;">
+              Our state-of-the-art Chicago distribution center features multi-zone refrigeration rooms maintaining continuous -18°C deep freeze and -2°C to 0°C fresh chilled conditions.
+            </p>
+            <ul style="line-height:2; font-size:var(--fs-sm); margin-bottom:var(--s-6);">
+              <li><i class="ph ph-check-circle" style="color:var(--c-primary);" aria-hidden="true"></i> <strong>USDA On-Site Inspection:</strong> Daily carcass &amp; cut verification.</li>
+              <li><i class="ph ph-check-circle" style="color:var(--c-primary);" aria-hidden="true"></i> <strong>Custom Butchery Rooms:</strong> Automated portion control &amp; hand trimming.</li>
+              <li><i class="ph ph-check-circle" style="color:var(--c-primary);" aria-hidden="true"></i> <strong>6-Protein Handling:</strong> Separate dedicated lines for Beef, Pork, Mutton, Chicken, Fish, and Rabbit.</li>
+            </ul>
+            <a class="btn btn--primary" href="products.html">Explore Wholesale Catalog &rarr;</a>
+          </div>
+
+          <div>
+            <img class="category-card__img" style="height:380px; border-radius:var(--radius); border:1px solid var(--line);" src="assets/images/hero-meat-wholesale.jpg" alt="Wholesale Meat Butchery Storage Facility">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS GRID -->
+    <section class="section section--surface">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow"><i class="ph ph-shield-check" aria-hidden="true"></i> Food Safety &amp; Standards</span>
+          <h2>Certified Traceability &amp; Safety Compliance</h2>
+        </div>
+
+        <div class="grid grid--4">
+          <div class="card text-center" style="padding:var(--s-6);">
+            <i class="ph ph-seal-check" style="font-size:3rem; color:var(--c-primary); margin-bottom:var(--s-2);" aria-hidden="true"></i>
+            <h4 style="font-family:var(--font-display);">USDA Inspected</h4>
+            <p style="font-size:var(--fs-xs); color:var(--muted);">Full federal inspection stamp on all beef, pork, poultry, and mutton primals.</p>
+          </div>
+
+          <div class="card text-center" style="padding:var(--s-6);">
+            <i class="ph ph-thermometer-cold" style="font-size:3rem; color:var(--c-accent); margin-bottom:var(--s-2);" aria-hidden="true"></i>
+            <h4 style="font-family:var(--font-display);">HACCP Certified</h4>
+            <p style="font-size:var(--fs-xs); color:var(--muted);">Hazard analysis critical control point logging at every stage of receiving &amp; transit.</p>
+          </div>
+
+          <div class="card text-center" style="padding:var(--s-6);">
+            <i class="ph ph-star-of-david" style="font-size:3rem; color:var(--c-primary); margin-bottom:var(--s-2);" aria-hidden="true"></i>
+            <h4 style="font-family:var(--font-display);">Halal Certified</h4>
+            <p style="font-size:var(--fs-xs); color:var(--muted);">Dedicated certified Halal slaughter &amp; processing lines for Mutton, Lamb, Beef, and Poultry.</p>
+          </div>
+
+          <div class="card text-center" style="padding:var(--s-6);">
+            <i class="ph ph-truck" style="font-size:3rem; color:var(--c-accent); margin-bottom:var(--s-2);" aria-hidden="true"></i>
+            <h4 style="font-family:var(--font-display);">Cold-Chain Fleet</h4>
+            <p style="font-size:var(--fs-xs); color:var(--muted);">Real-time GPS &amp; temperature telemetry monitored fleet of refrigerated trucks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> PRIME Wholesale Meats &amp; Provisions Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Commercial Buyer Login — PRIME Wholesale Meats</title>
+  <meta name="description"
+    content="Log in to your PRIME Wholesale Meats B2B commercial account to manage bulk orders, cut schedules, and cold-chain deliveries.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..800&family=IBM+Plex+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('prime-meat-theme');
+        var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', stored || (dark ? 'dark' : 'light'));
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body>
+  <div class="auth-wrap" style="min-height:100vh; display:flex; align-items:center; justify-content:center; padding:var(--s-6);">
+    <div class="card" style="max-width:440px; width:100%; padding:var(--s-8);">
+      <div class="text-center" style="margin-bottom:var(--s-6);">
+        <a href="index.html">
+          <img src="assets/images/prime-wholesale-logo.svg" alt="PRIME Wholesale Meats" width="220" height="48" style="margin:0 auto var(--s-4);">
+        </a>
+        <h2 style="font-family:var(--font-display);">Commercial Buyer Login</h2>
+        <p style="font-size:var(--fs-xs); color:var(--muted);">Access your verified wholesale pricing &amp; order history.</p>
+      </div>
+
+      <form id="loginForm" novalidate>
+        <div class="field" style="margin-bottom:var(--s-4);">
+          <label for="loginEmail">Commercial Account Email</label>
+          <input type="email" id="loginEmail" class="field__input" placeholder="purchasing@company.com" required>
+          <span class="field__msg"></span>
+        </div>
+
+        <div class="field" style="margin-bottom:var(--s-6);">
+          <label for="loginPassword">Account Password</label>
+          <input type="password" id="loginPassword" class="field__input" placeholder="••••••••" required>
+          <span class="field__msg"></span>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--block" style="margin-bottom:var(--s-4);">
+          Sign In to Portal <i class="ph ph-sign-in" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <div class="text-center" style="font-size:var(--fs-xs); color:var(--muted);">
+        Don't have a verified commercial account? <a href="register.html" style="color:var(--c-primary); font-weight:700;">Apply for Account &rarr;</a>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

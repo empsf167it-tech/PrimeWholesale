@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register Wholesale Buyer Account — PRIME Wholesale Meats</title>
+  <meta name="description"
+    content="Apply for a verified B2B commercial wholesale buyer account to access bulk tier pricing and custom butchery options.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..800&family=IBM+Plex+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('prime-meat-theme');
+        var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', stored || (dark ? 'dark' : 'light'));
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body>
+  <div class="auth-wrap" style="min-height:100vh; display:flex; align-items:center; justify-content:center; padding:var(--s-6);">
+    <div class="card" style="max-width:540px; width:100%; padding:var(--s-8);">
+      <div class="text-center" style="margin-bottom:var(--s-6);">
+        <a href="index.html">
+          <img src="assets/images/prime-wholesale-logo.svg" alt="PRIME Wholesale Meats" width="220" height="48" style="margin:0 auto var(--s-4);">
+        </a>
+        <h2 style="font-family:var(--font-display);">Register B2B Account</h2>
+        <p style="font-size:var(--fs-xs); color:var(--muted);">Apply for commercial credit &amp; wholesale tier pricing unlock.</p>
+      </div>
+
+      <form id="registerForm" novalidate>
+        <div class="field" style="margin-bottom:var(--s-4);">
+          <label for="regCompany">Business Name / Tax ID</label>
+          <input type="text" id="regCompany" class="field__input" placeholder="Grand Bistro LLC / EIN 98-7654321" required>
+          <span class="field__msg"></span>
+        </div>
+
+        <div class="field" style="margin-bottom:var(--s-4);">
+          <label for="regEmail">Commercial Purchasing Email</label>
+          <input type="email" id="regEmail" class="field__input" placeholder="orders@grandbistro.com" required>
+          <span class="field__msg"></span>
+        </div>
+
+        <div class="field" style="margin-bottom:var(--s-4);">
+          <label for="regBusinessType">Business Category</label>
+          <select id="regBusinessType" class="field__input" required>
+            <option value="" disabled selected>Select business type...</option>
+            <option value="restaurant">Restaurant / Bistro Chain</option>
+            <option value="supermarket">Supermarket / Retail Grocery</option>
+            <option value="hotel">Hotel / Resort / Catering</option>
+            <option value="distributor">Regional Food Distributor</option>
+            <option value="butcher">Artisan Meat Market / Butcher Shop</option>
+          </select>
+          <span class="field__msg"></span>
+        </div>
+
+        <div class="field" style="margin-bottom:var(--s-6);">
+          <label for="regPassword">Set Account Password</label>
+          <input type="password" id="regPassword" class="field__input" placeholder="Minimum 8 characters" required>
+          <span class="field__msg"></span>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--block" style="margin-bottom:var(--s-4);">
+          Submit Business Registration <i class="ph ph-user-plus" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <div class="text-center" style="font-size:var(--fs-xs); color:var(--muted);">
+        Already have a commercial account? <a href="login.html" style="color:var(--c-primary); font-weight:700;">Sign In &rarr;</a>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
