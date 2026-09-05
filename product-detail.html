@@ -15,6 +15,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="stylesheet" href="assets/css/style.css">
 
   <script>
@@ -23,7 +24,7 @@
         var stored = localStorage.getItem('prime-meat-theme');
         var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         document.documentElement.setAttribute('data-theme', stored || (dark ? 'dark' : 'light'));
-      } catch (e) {}
+      } catch (e) { }
     })();
   </script>
 </head>
@@ -35,7 +36,8 @@
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="PRIME Wholesale Meats">
-        <img class="brand__logo" src="assets/images/prime-wholesale-logo.svg" alt="PRIME Wholesale Meats" width="220" height="48">
+        <img class="brand__logo" src="assets/images/prime-wholesale-logo.svg" alt="PRIME Wholesale Meats" width="220"
+          height="48">
       </a>
 
       <nav class="nav" id="primaryNav" aria-label="Primary Navigation">
@@ -72,22 +74,28 @@
   <main id="main">
     <section class="section page-head">
       <div class="container">
-        <a href="products.html" class="btn btn--ghost btn--sm" style="margin-bottom:var(--s-4);">&larr; Back to Catalog</a>
+        <a href="products.html" class="btn btn--ghost btn--sm" style="margin-bottom:var(--s-4);">&larr; Back to
+          Catalog</a>
         <div class="grid grid--2" style="align-items:center;">
           <div>
-            <span class="eyebrow" style="color:var(--c-accent);" id="detCategory">🥩 BEEF · USDA PRIME &amp; WAGYU</span>
+            <span class="eyebrow" style="color:var(--c-accent);" id="detCategory">🥩 BEEF · USDA PRIME &amp;
+              WAGYU</span>
             <h1 class="page-head__title" id="detTitle">A5 Wagyu &amp; Prime Ribeye Subprimal</h1>
             <p class="lead" id="detDesc">
-              Hand-selected whole beef ribeye subprimal featuring exceptional BMS 8+ marbling, wet-aged 28 days under controlled cold room conditions. Ideal for high-end steakhouse portioning.
+              Hand-selected whole beef ribeye subprimal featuring exceptional BMS 8+ marbling, wet-aged 28 days under
+              controlled cold room conditions. Ideal for high-end steakhouse portioning.
             </p>
             <div class="badge-meat-group" style="margin-top:var(--s-4);">
               <span class="moq-badge" id="detMoq">MOQ: 25 KG</span>
               <span class="temp-badge" id="detTemp">Chilled -2°C to 0°C</span>
-              <span class="moq-badge" style="background:var(--accent-soft); color:var(--c-accent);">USDA Inspected</span>
+              <span class="moq-badge" style="background:var(--accent-soft); color:var(--c-accent);">USDA
+                Inspected</span>
             </div>
           </div>
           <div>
-            <img id="detImg" class="category-card__img" style="height:360px; border-radius:var(--radius); border:1px solid var(--line);" src="assets/images/category-beef.jpg" alt="Beef Cut Specs">
+            <img id="detImg" class="category-card__img"
+              style="height:360px; border-radius:var(--radius); border:1px solid var(--line);"
+              src="assets/images/category-beef.jpg" alt="Beef Cut Specs">
           </div>
         </div>
       </div>
@@ -97,9 +105,10 @@
     <section class="section" style="padding-top:0;">
       <div class="container">
         <div class="grid grid--2">
-          
+
           <div>
-            <h3 style="font-family:var(--font-display); margin-bottom:var(--s-4);">Product Cut &amp; Packaging Specs</h3>
+            <h3 style="font-family:var(--font-display); margin-bottom:var(--s-4);">Product Cut &amp; Packaging Specs
+            </h3>
             <ul style="line-height:2.2; font-size:var(--fs-sm);">
               <li><strong>Primal Cut:</strong> Lip-On Whole Ribeye Subprimal</li>
               <li><strong>Weight Per Piece:</strong> 5.5 KG — 7.2 KG per vacuum pack</li>
@@ -156,8 +165,67 @@
     </section>
   </main>
 
+  <!-- ============================ FOOTER ============================ -->
   <footer class="site-footer">
     <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col--brand">
+          <a class="brand" href="index.html" aria-label="PRIME Wholesale Meats">
+            <img class="brand__logo" src="assets/images/prime-wholesale-logo.svg" alt="PRIME Wholesale Meats"
+              width="200" height="44">
+          </a>
+          <p class="footer-tagline">
+            Direct-from-farm wholesale supplier of Beef, Pork, Mutton, Chicken, Fish, and Rabbit. USDA &amp; HACCP
+            Certified.
+          </p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo" aria-hidden="true"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Twitter X"><i class="ph ph-x-logo" aria-hidden="true"></i></a>
+            <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo" aria-hidden="true"></i></a>
+          </div>
+          <div class="footer-badges" style="margin-top:var(--s-2);">
+            <span class="badge"><i class="ph ph-seal-check" aria-hidden="true"></i> USDA Inspected</span>
+            <span class="badge"><i class="ph ph-snowflake" aria-hidden="true"></i> Cold-Chain Certified</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Protein Catalog</h4>
+          <ul class="footer-links">
+            <li><a href="products.html?type=beef">USDA Prime Beef</a></li>
+            <li><a href="products.html?type=pork">Heritage Farm Pork</a></li>
+            <li><a href="products.html?type=mutton">Farm Mutton &amp; Lamb</a></li>
+            <li><a href="products.html?type=chicken">Free-Range Chicken</a></li>
+            <li><a href="products.html?type=fish">Fresh Ocean Fish</a></li>
+            <li><a href="products.html?type=rabbit">Dressed Farm Rabbit</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Wholesale Services</h4>
+          <ul class="footer-links">
+            <li><a href="calculator.html">Bulk Order Calculator</a></li>
+            <li><a href="about.html">Cold Storage Facility</a></li>
+            <li><a href="contact.html">B2B Quote Request</a></li>
+            <li><a href="login.html">Buyer Account Portal</a></li>
+            <li><a href="register.html">Register Commercial Account</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Distribution HQ</h4>
+          <address class="footer-address">
+            <strong>PRIME Wholesale Meats HQ</strong><br>
+            1200 Cold Chain Logistics Pkwy<br>
+            Chicago, IL 60609<br>
+            <strong>Hotline:</strong> +1 (800) 555-MEAT<br>
+            <strong>Email:</strong> wholesale@primemeats.example
+          </address>
+        </div>
+      </div>
+
       <div class="footer-bottom">
         <p>&copy; <span data-year>2026</span> PRIME Wholesale Meats &amp; Provisions Inc. All rights reserved.</p>
       </div>
@@ -166,7 +234,7 @@
 
   <script src="assets/js/main.js"></script>
   <script>
-    (function() {
+    (function () {
       const items = {
         'wagyu-ribeye': {
           title: 'A5 Wagyu & Prime Ribeye Subprimal',
@@ -202,7 +270,7 @@
           title: 'Whole Dressed Farm Rabbit',
           category: '🐇 SPECIALTY GAME · FARM RAISED',
           desc: 'Grain-fed young dressed farm rabbit, head-off carcass, vacuum sealed individually for European bistro and fine dining menus.',
-          moq: 'MOQ: 20 KG', temp: 'Vacuum Frozen (-18°C)', img: 'assets/images/category-rabbit.jpg'
+          moq: 'MOQ: 20 KG', temp: 'Vacuum Frozen (-18°C)', img: 'https://www.marxfoods.com/images/rabbit-saddle-meat_RabbitBonelessSaddle-3.jpg?resizeid=14&resizeh=600&resizew=600'
         }
       };
 

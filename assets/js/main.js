@@ -12,7 +12,7 @@
   /* ------------------------------------------------------------------
      1. Theme toggle — persists in localStorage, defaults to OS setting
      ------------------------------------------------------------------ */
-  const THEME_KEY = 'loannest-theme';
+  const THEME_KEY = 'prime-meat-theme';
 
   function readStoredTheme() {
     try {
@@ -148,24 +148,34 @@
      5. Accordions (FAQ blocks)
      ------------------------------------------------------------------ */
   function initAccordions() {
-    $$('.accordion').forEach((accordion) => {
-      const triggers = $$('.accordion__trigger', accordion);
+    const accordions = $$('.accordion');
+    accordions.forEach((accordion) => {
+      const trigger = accordion.querySelector('.accordion__trigger');
+      const content = accordion.querySelector('.accordion__content');
+      if (!trigger) return;
 
-      triggers.forEach((trigger) => {
-        trigger.addEventListener('click', () => {
-          const item = trigger.closest('.accordion__item');
-          const isOpen = item.classList.contains('is-open');
+      trigger.addEventListener('click', () => {
+        const isOpen = accordion.classList.contains('is-open');
 
-          triggers.forEach((other) => {
-            other.setAttribute('aria-expanded', 'false');
-            other.closest('.accordion__item').classList.remove('is-open');
-          });
-
-          if (!isOpen) {
-            item.classList.add('is-open');
-            trigger.setAttribute('aria-expanded', 'true');
+        accordions.forEach((other) => {
+          if (other !== accordion) {
+            other.classList.remove('is-open');
+            const ot = other.querySelector('.accordion__trigger');
+            const oc = other.querySelector('.accordion__content');
+            if (ot) ot.setAttribute('aria-expanded', 'false');
+            if (oc) oc.hidden = true;
           }
         });
+
+        if (isOpen) {
+          accordion.classList.remove('is-open');
+          trigger.setAttribute('aria-expanded', 'false');
+          if (content) content.hidden = true;
+        } else {
+          accordion.classList.add('is-open');
+          trigger.setAttribute('aria-expanded', 'true');
+          if (content) content.hidden = false;
+        }
       });
     });
   }
@@ -514,7 +524,38 @@
   }
 
   /* ------------------------------------------------------------------
-     11. Footer year
+     11. Back to Top Button
+     ------------------------------------------------------------------ */
+  function initBackToTop() {
+    let btn = $('#backToTop');
+    if (!btn) {
+      btn = document.createElement('button');
+      btn.id = 'backToTop';
+      btn.className = 'back-to-top';
+      btn.setAttribute('type', 'button');
+      btn.setAttribute('aria-label', 'Back to top');
+      btn.innerHTML = '<i class="ph ph-arrow-up" aria-hidden="true"></i>';
+      document.body.appendChild(btn);
+    }
+
+    const toggleBtn = () => {
+      if (window.scrollY > 300) {
+        btn.classList.add('is-visible');
+      } else {
+        btn.classList.remove('is-visible');
+      }
+    };
+
+    window.addEventListener('scroll', toggleBtn, { passive: true });
+    toggleBtn();
+
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ------------------------------------------------------------------
+     12. Footer year
      ------------------------------------------------------------------ */
   function initYear() {
     $$('[data-year]').forEach((el) => { el.textContent = String(new Date().getFullYear()); });
@@ -535,6 +576,7 @@
     initPasswordToggles();
     initNewsletter();
     initCountUp();
+    initBackToTop();
     initYear();
   }
 

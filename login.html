@@ -15,6 +15,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="stylesheet" href="assets/css/style.css">
 
   <script>
@@ -31,12 +32,16 @@
 <body>
   <div class="auth-wrap" style="min-height:100vh; display:flex; align-items:center; justify-content:center; padding:var(--s-6);">
     <div class="card" style="max-width:440px; width:100%; padding:var(--s-8);">
-      <div class="text-center" style="margin-bottom:var(--s-6);">
+      <div class="text-center" style="margin-bottom:var(--s-5);">
         <a href="index.html">
-          <img src="assets/images/prime-wholesale-logo.svg" alt="PRIME Wholesale Meats" width="220" height="48" style="margin:0 auto var(--s-4);">
+          <img src="assets/images/prime-wholesale-logo.svg" alt="PRIME Wholesale Meats" width="200" height="44" style="margin:0 auto var(--s-3);">
         </a>
-        <h2 style="font-family:var(--font-display);">Commercial Buyer Login</h2>
-        <p style="font-size:var(--fs-xs); color:var(--muted);">Access your verified wholesale pricing &amp; order history.</p>
+        <h1 style="font-family:var(--font-display); font-size:var(--fs-h3); margin-bottom:var(--s-1);">Buyer Login</h1>
+        <p style="font-size:var(--fs-xs); color:var(--muted);">Access your wholesale account &amp; order history.</p>
+      </div>
+
+      <div id="loginSuccess" class="alert alert--success" style="display:none; margin-bottom:var(--s-4);">
+        <i class="ph ph-check-circle" aria-hidden="true"></i> Login successful! Redirecting to buyer dashboard...
       </div>
 
       <form id="loginForm" novalidate>
@@ -46,10 +51,23 @@
           <span class="field__msg"></span>
         </div>
 
-        <div class="field" style="margin-bottom:var(--s-6);">
+        <div class="field" style="margin-bottom:var(--s-2);">
           <label for="loginPassword">Account Password</label>
-          <input type="password" id="loginPassword" class="field__input" placeholder="••••••••" required>
+          <div class="field__wrap">
+            <input type="password" id="loginPassword" class="field__input" placeholder="••••••••" required>
+            <button type="button" class="pw-toggle" aria-label="Show password">
+              <i class="ph ph-eye" aria-hidden="true"></i>
+            </button>
+          </div>
           <span class="field__msg"></span>
+        </div>
+
+        <div class="auth-options">
+          <label class="checkbox-label">
+            <input type="checkbox" id="loginRemember">
+            <span>Remember me</span>
+          </label>
+          <a href="#" class="forgot-link">Forgot password?</a>
         </div>
 
         <button type="submit" class="btn btn--primary btn--block" style="margin-bottom:var(--s-4);">

@@ -15,6 +15,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="stylesheet" href="assets/css/style.css">
 
   <script>
@@ -31,15 +32,25 @@
 <body>
   <div class="auth-wrap" style="min-height:100vh; display:flex; align-items:center; justify-content:center; padding:var(--s-6);">
     <div class="card" style="max-width:540px; width:100%; padding:var(--s-8);">
-      <div class="text-center" style="margin-bottom:var(--s-6);">
+      <div class="text-center" style="margin-bottom:var(--s-5);">
         <a href="index.html">
-          <img src="assets/images/prime-wholesale-logo.svg" alt="PRIME Wholesale Meats" width="220" height="48" style="margin:0 auto var(--s-4);">
+          <img src="assets/images/prime-wholesale-logo.svg" alt="PRIME Wholesale Meats" width="200" height="44" style="margin:0 auto var(--s-3);">
         </a>
-        <h2 style="font-family:var(--font-display);">Register B2B Account</h2>
-        <p style="font-size:var(--fs-xs); color:var(--muted);">Apply for commercial credit &amp; wholesale tier pricing unlock.</p>
+        <h1 style="font-family:var(--font-display); font-size:var(--fs-h3); margin-bottom:var(--s-1);">Register B2B Account</h1>
+        <p style="font-size:var(--fs-xs); color:var(--muted);">Apply for commercial credit &amp; wholesale tier pricing.</p>
+      </div>
+
+      <div id="registerSuccess" class="alert alert--success" style="display:none; margin-bottom:var(--s-4);">
+        <i class="ph ph-check-circle" aria-hidden="true"></i> Registration submitted! An account manager will review your business credentials within 2 business hours.
       </div>
 
       <form id="registerForm" novalidate>
+        <div class="field" style="margin-bottom:var(--s-4);">
+          <label for="registerName">Full Name / Purchasing Officer</label>
+          <input type="text" id="registerName" class="field__input" placeholder="e.g. Sarah Jenkins" required>
+          <span class="field__msg"></span>
+        </div>
+
         <div class="field" style="margin-bottom:var(--s-4);">
           <label for="regCompany">Business Name / Tax ID</label>
           <input type="text" id="regCompany" class="field__input" placeholder="Grand Bistro LLC / EIN 98-7654321" required>
@@ -47,8 +58,8 @@
         </div>
 
         <div class="field" style="margin-bottom:var(--s-4);">
-          <label for="regEmail">Commercial Purchasing Email</label>
-          <input type="email" id="regEmail" class="field__input" placeholder="orders@grandbistro.com" required>
+          <label for="registerEmail">Commercial Purchasing Email</label>
+          <input type="email" id="registerEmail" class="field__input" placeholder="orders@grandbistro.com" required>
           <span class="field__msg"></span>
         </div>
 
@@ -65,9 +76,33 @@
           <span class="field__msg"></span>
         </div>
 
+        <div class="field" style="margin-bottom:var(--s-4);">
+          <label for="registerPassword">Set Account Password</label>
+          <div class="field__wrap">
+            <input type="password" id="registerPassword" class="field__input" placeholder="Minimum 8 characters" required>
+            <button type="button" class="pw-toggle" aria-label="Show password">
+              <i class="ph ph-eye" aria-hidden="true"></i>
+            </button>
+          </div>
+          <span class="field__msg"></span>
+        </div>
+
+        <div class="field" style="margin-bottom:var(--s-4);">
+          <label for="registerConfirm">Confirm Account Password</label>
+          <div class="field__wrap">
+            <input type="password" id="registerConfirm" class="field__input" placeholder="Re-enter password" required>
+            <button type="button" class="pw-toggle" aria-label="Show password">
+              <i class="ph ph-eye" aria-hidden="true"></i>
+            </button>
+          </div>
+          <span class="field__msg"></span>
+        </div>
+
         <div class="field" style="margin-bottom:var(--s-6);">
-          <label for="regPassword">Set Account Password</label>
-          <input type="password" id="regPassword" class="field__input" placeholder="Minimum 8 characters" required>
+          <label class="checkbox-label">
+            <input type="checkbox" id="registerTerms" required>
+            <span>I agree to the <a href="#" style="color:var(--c-primary); text-decoration:underline;">Terms of Supply Agreement</a> and <a href="#" style="color:var(--c-primary); text-decoration:underline;">Cold-Chain Privacy Policy</a></span>
+          </label>
           <span class="field__msg"></span>
         </div>
 

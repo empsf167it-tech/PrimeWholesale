@@ -15,6 +15,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="stylesheet" href="assets/css/style.css">
 
   <script>
@@ -80,91 +81,95 @@
 
     <section class="section" style="padding-top:0;">
       <div class="container">
-        <div class="grid grid--2" id="fullCalculator">
+        <div class="grid grid--2" id="fullCalculator" style="align-items:stretch;">
           
           <!-- LEFT: CONTROLS -->
-          <div class="card" style="padding:var(--s-8);">
-            <h3 style="font-family:var(--font-display); margin-bottom:var(--s-6);"><i class="ph ph-sliders" style="color:var(--c-accent);" aria-hidden="true"></i> Order Specifications</h3>
+          <div class="card" style="padding:var(--s-8); display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+            <div>
+              <h3 style="font-family:var(--font-display); margin-bottom:var(--s-6); display:flex; align-items:center; gap:var(--s-2);"><i class="ph ph-sliders" style="color:var(--c-accent);" aria-hidden="true"></i> Order Specifications</h3>
 
-            <div class="field" style="margin-bottom:var(--s-6);">
-              <label for="calcProtein">Protein Line &amp; Base Price</label>
-              <select id="calcProtein" class="field__input">
-                <option value="beef" selected>🥩 USDA Prime Beef ($14.50 / kg base)</option>
-                <option value="pork">🐖 Heritage Pork ($8.80 / kg base)</option>
-                <option value="mutton">🐑 Farm Mutton &amp; Lamb ($13.20 / kg base)</option>
-                <option value="chicken">🐓 Free-Range Chicken ($4.60 / kg base)</option>
-                <option value="fish">🐟 Ocean Fresh Salmon &amp; Fish ($16.00 / kg base)</option>
-                <option value="rabbit">🐇 Dressed Farm Rabbit ($15.50 / kg base)</option>
-              </select>
-            </div>
-
-            <div class="field" style="margin-bottom:var(--s-6);">
-              <div style="display:flex; justify-content:space-between; margin-bottom:var(--s-2);">
-                <label for="calcWeightInput">Total Weight Volume (KG)</label>
-                <span class="moq-badge" style="background:var(--primary-soft);">100kg+ = 5% OFF | 500kg+ = 12% OFF | 1,000kg+ = 20% OFF</span>
+              <div class="field" style="margin-bottom:var(--s-6);">
+                <label for="calcProtein">Protein Line &amp; Base Price</label>
+                <select id="calcProtein" class="field__input">
+                  <option value="beef" selected>🥩 USDA Prime Beef ($14.50 / kg base)</option>
+                  <option value="pork">🐖 Heritage Pork ($8.80 / kg base)</option>
+                  <option value="mutton">🐑 Farm Mutton &amp; Lamb ($13.20 / kg base)</option>
+                  <option value="chicken">🐓 Free-Range Chicken ($4.60 / kg base)</option>
+                  <option value="fish">🐟 Ocean Fresh Salmon &amp; Fish ($16.00 / kg base)</option>
+                  <option value="rabbit">🐇 Dressed Farm Rabbit ($15.50 / kg base)</option>
+                </select>
               </div>
-              <input type="range" id="calcWeightSlider" min="10" max="2500" step="10" value="500" style="width:100%; margin-bottom:var(--s-3); accent-color:var(--c-primary);">
-              <input type="number" id="calcWeightInput" min="10" max="10000" value="500" step="10" class="field__input" style="font-family:var(--font-mono); font-weight:700;">
-            </div>
 
-            <div class="field" style="margin-bottom:var(--s-6);">
-              <label for="calcPackaging">Packaging &amp; Cold Preservation</label>
-              <select id="calcPackaging" class="field__input">
-                <option value="vacuum" selected>High-Barrier Vacuum Skin Pouch (VSP) (+$0.30/kg)</option>
-                <option value="chilled">Chilled Fresh Insulated Master Box (+$0.25/kg)</option>
-                <option value="frozen">Deep Frozen (-18°C) Block Packing (+$0.45/kg)</option>
-              </select>
-            </div>
+              <div class="field" style="margin-bottom:var(--s-6);">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:var(--s-2); flex-wrap:wrap; gap:var(--s-2);">
+                  <label for="calcWeightInput">Total Weight Volume (KG)</label>
+                  <span class="moq-badge" style="background:var(--primary-soft);">100kg+ = 5% OFF | 500kg+ = 12% OFF | 1,000kg+ = 20% OFF</span>
+                </div>
+                <input type="range" id="calcWeightSlider" min="10" max="2500" step="10" value="500" style="width:100%; margin-bottom:var(--s-3); accent-color:var(--c-primary);">
+                <input type="number" id="calcWeightInput" min="10" max="10000" value="500" step="10" class="field__input" style="font-family:var(--font-mono); font-weight:700;">
+              </div>
 
-            <div class="field" style="margin-bottom:var(--s-6);">
-              <label for="calcFreight">Cold-Chain Freight Logistics</label>
-              <select id="calcFreight" class="field__input">
-                <option value="truck" selected>Standard Refrigerated LTL Truck (+$0.80/kg)</option>
-                <option value="express">Express Temperature Van Delivery (+$1.50/kg)</option>
-                <option value="air">Temperature Sealed Air Freight (+$2.80/kg)</option>
-              </select>
+              <div class="field" style="margin-bottom:var(--s-6);">
+                <label for="calcPackaging">Packaging &amp; Cold Preservation</label>
+                <select id="calcPackaging" class="field__input">
+                  <option value="vacuum" selected>High-Barrier Vacuum Skin Pouch (VSP) (+$0.30/kg)</option>
+                  <option value="chilled">Chilled Fresh Insulated Master Box (+$0.25/kg)</option>
+                  <option value="frozen">Deep Frozen (-18°C) Block Packing (+$0.45/kg)</option>
+                </select>
+              </div>
+
+              <div class="field" style="margin-bottom:var(--s-4);">
+                <label for="calcFreight">Cold-Chain Freight Logistics</label>
+                <select id="calcFreight" class="field__input">
+                  <option value="truck" selected>Standard Refrigerated LTL Truck (+$0.80/kg)</option>
+                  <option value="express">Express Temperature Van Delivery (+$1.50/kg)</option>
+                  <option value="air">Temperature Sealed Air Freight (+$2.80/kg)</option>
+                </select>
+              </div>
             </div>
           </div>
 
           <!-- RIGHT: CALCULATED INVOICE BREAKDOWN -->
-          <div class="card" style="padding:var(--s-8); background:var(--surface-alt); border:2px solid var(--c-primary);">
-            <h3 style="font-family:var(--font-display); margin-bottom:var(--s-6);"><i class="ph ph-receipt" style="color:var(--c-primary);" aria-hidden="true"></i> Instant Estimate Summary</h3>
+          <div class="card" style="padding:var(--s-8); background:var(--surface-alt); border:2px solid var(--c-primary); display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+            <div>
+              <h3 style="font-family:var(--font-display); margin-bottom:var(--s-6); display:flex; align-items:center; gap:var(--s-2);"><i class="ph ph-receipt" style="color:var(--c-primary);" aria-hidden="true"></i> Instant Estimate Summary</h3>
 
-            <div style="display:flex; flex-direction:column; gap:var(--s-4); font-size:var(--fs-sm);">
-              <div style="display:flex; justify-content:space-between;">
-                <span>Gross Meat Base Subtotal:</span>
-                <strong id="outSubtotal" style="font-family:var(--font-mono);">$7,250.00</strong>
-              </div>
+              <div style="display:flex; flex-direction:column; gap:var(--s-4); font-size:var(--fs-sm);">
+                <div style="display:flex; justify-content:space-between;">
+                  <span>Gross Meat Base Subtotal:</span>
+                  <strong id="outSubtotal" style="font-family:var(--font-mono);">$7,250.00</strong>
+                </div>
 
-              <div style="display:flex; justify-content:space-between; color:var(--c-primary); font-weight:700;">
-                <span>Volume Tier Discount (<span id="outDiscountRate">12% Off</span>):</span>
-                <strong id="outDiscountAmount" style="font-family:var(--font-mono);">-$870.00</strong>
-              </div>
+                <div style="display:flex; justify-content:space-between; color:var(--c-primary); font-weight:700;">
+                  <span>Volume Tier Discount (<span id="outDiscountRate">12% Off</span>):</span>
+                  <strong id="outDiscountAmount" style="font-family:var(--font-mono);">-$870.00</strong>
+                </div>
 
-              <div style="display:flex; justify-content:space-between;">
-                <span>Insulated Packaging Fee:</span>
-                <strong id="outPackaging" style="font-family:var(--font-mono);">$150.00</strong>
-              </div>
+                <div style="display:flex; justify-content:space-between;">
+                  <span>Insulated Packaging Fee:</span>
+                  <strong id="outPackaging" style="font-family:var(--font-mono);">$150.00</strong>
+                </div>
 
-              <div style="display:flex; justify-content:space-between;">
-                <span>Cold-Chain Freight Charges:</span>
-                <strong id="outFreight" style="font-family:var(--font-mono);">$400.00</strong>
-              </div>
+                <div style="display:flex; justify-content:space-between;">
+                  <span>Cold-Chain Freight Charges:</span>
+                  <strong id="outFreight" style="font-family:var(--font-mono);">$400.00</strong>
+                </div>
 
-              <hr style="border:0; border-top:1px solid var(--line); margin:var(--s-2) 0;">
+                <hr style="border:0; border-top:1px solid var(--line); margin:var(--s-2) 0;">
 
-              <div style="display:flex; justify-content:space-between; font-size:var(--fs-h3); font-weight:800; color:var(--c-primary);">
-                <span>Total Wholesale Quote:</span>
-                <span id="outTotalTotal" style="font-family:var(--font-mono);">$6,930.00</span>
-              </div>
+                <div style="display:flex; justify-content:space-between; font-size:var(--fs-h3); font-weight:800; color:var(--c-primary);">
+                  <span>Total Wholesale Quote:</span>
+                  <span id="outTotalTotal" style="font-family:var(--font-mono);">$6,930.00</span>
+                </div>
 
-              <div style="display:flex; justify-content:space-between; background:var(--surface); padding:var(--s-3); border-radius:var(--radius); border:1px solid var(--line);">
-                <span style="font-weight:600;">Effective Net Cost per KG:</span>
-                <strong id="outEffectivePrice" style="font-family:var(--font-mono); color:var(--c-accent); font-size:1.1rem;">$13.86 / kg</strong>
+                <div style="display:flex; justify-content:space-between; background:var(--surface); padding:var(--s-3); border-radius:var(--radius); border:1px solid var(--line);">
+                  <span style="font-weight:600;">Effective Net Cost per KG:</span>
+                  <strong id="outEffectivePrice" style="font-family:var(--font-mono); color:var(--c-accent); font-size:1.1rem;">$13.86 / kg</strong>
+                </div>
               </div>
             </div>
 
-            <div style="margin-top:var(--s-8); display:flex; gap:var(--s-3);">
+            <div style="margin-top:var(--s-8); display:flex; gap:var(--s-3); flex-wrap:wrap;">
               <a class="btn btn--primary btn--block" href="contact.html?type=official-quote">
                 Lock In Wholesale Quote <i class="ph ph-arrow-right" aria-hidden="true"></i>
               </a>
@@ -179,8 +184,65 @@
     </section>
   </main>
 
+  <!-- ============================ FOOTER ============================ -->
   <footer class="site-footer">
     <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col--brand">
+          <a class="brand" href="index.html" aria-label="PRIME Wholesale Meats">
+            <img class="brand__logo" src="assets/images/prime-wholesale-logo.svg" alt="PRIME Wholesale Meats" width="200" height="44">
+          </a>
+          <p class="footer-tagline">
+            Direct-from-farm wholesale supplier of Beef, Pork, Mutton, Chicken, Fish, and Rabbit. USDA &amp; HACCP Certified.
+          </p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo" aria-hidden="true"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Twitter X"><i class="ph ph-x-logo" aria-hidden="true"></i></a>
+            <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo" aria-hidden="true"></i></a>
+          </div>
+          <div class="footer-badges" style="margin-top:var(--s-2);">
+            <span class="badge"><i class="ph ph-seal-check" aria-hidden="true"></i> USDA Inspected</span>
+            <span class="badge"><i class="ph ph-snowflake" aria-hidden="true"></i> Cold-Chain Certified</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Protein Catalog</h4>
+          <ul class="footer-links">
+            <li><a href="products.html?type=beef">USDA Prime Beef</a></li>
+            <li><a href="products.html?type=pork">Heritage Farm Pork</a></li>
+            <li><a href="products.html?type=mutton">Farm Mutton &amp; Lamb</a></li>
+            <li><a href="products.html?type=chicken">Free-Range Chicken</a></li>
+            <li><a href="products.html?type=fish">Fresh Ocean Fish</a></li>
+            <li><a href="products.html?type=rabbit">Dressed Farm Rabbit</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Wholesale Services</h4>
+          <ul class="footer-links">
+            <li><a href="calculator.html">Bulk Order Calculator</a></li>
+            <li><a href="about.html">Cold Storage Facility</a></li>
+            <li><a href="contact.html">B2B Quote Request</a></li>
+            <li><a href="login.html">Buyer Account Portal</a></li>
+            <li><a href="register.html">Register Commercial Account</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Distribution HQ</h4>
+          <address class="footer-address">
+            <strong>PRIME Wholesale Meats HQ</strong><br>
+            1200 Cold Chain Logistics Pkwy<br>
+            Chicago, IL 60609<br>
+            <strong>Hotline:</strong> +1 (800) 555-MEAT<br>
+            <strong>Email:</strong> wholesale@primemeats.example
+          </address>
+        </div>
+      </div>
+
       <div class="footer-bottom">
         <p>&copy; <span data-year>2026</span> PRIME Wholesale Meats &amp; Provisions Inc. All rights reserved.</p>
       </div>

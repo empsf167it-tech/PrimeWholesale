@@ -15,6 +15,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="stylesheet" href="assets/css/style.css">
 
   <script>
@@ -80,11 +81,13 @@
 
     <section class="section" style="padding-top:0;">
       <div class="container">
-        <div class="grid grid--2">
+        <div class="grid grid--2" style="align-items:start; gap:var(--s-8);">
           
           <!-- FORM -->
           <div class="card" style="padding:var(--s-8);">
-            <h3 style="font-family:var(--font-display); margin-bottom:var(--s-6);">Commercial Quote &amp; Inquiry Form</h3>
+            <h3 style="font-family:var(--font-display); margin-bottom:var(--s-6); display:flex; align-items:center; gap:var(--s-2);">
+              <i class="ph ph-note-pencil" style="color:var(--c-primary);" aria-hidden="true"></i> Commercial Quote &amp; Inquiry Form
+            </h3>
             
             <div id="contactSuccess" class="alert alert--success" style="display:none; margin-bottom:var(--s-4);">
               <i class="ph ph-check-circle" aria-hidden="true"></i> Thank you! Your wholesale inquiry has been dispatched. A commercial account representative will contact you shortly.
@@ -136,36 +139,153 @@
             </form>
           </div>
 
-          <!-- DIRECT HOTLINE & LOGISTICS HUBS -->
-          <div>
-            <div class="card" style="padding:var(--s-8); margin-bottom:var(--s-6); background:var(--surface-alt);">
-              <h3 style="font-family:var(--font-display); margin-bottom:var(--s-4);"><i class="ph ph-phone-call" style="color:var(--c-primary);" aria-hidden="true"></i> Commercial Emergency Hotline</h3>
-              <p style="margin-bottom:var(--s-4); font-size:var(--fs-sm);">Need immediate order modification or same-day cold-chain dispatch?</p>
-              <div style="font-family:var(--font-mono); font-weight:800; font-size:1.4rem; color:var(--c-primary); margin-bottom:var(--s-2);">
+          <!-- DIRECT HOTLINE, CONTACT DETAILS & SOCIAL ICONS -->
+          <div style="display:flex; flex-direction:column; gap:var(--s-6);">
+            
+            <!-- Hotline Card -->
+            <div class="card" style="padding:var(--s-8); background:var(--surface-alt); border-left:4px solid var(--c-primary);">
+              <h3 style="font-family:var(--font-display); margin-bottom:var(--s-3); display:flex; align-items:center; gap:var(--s-2);">
+                <i class="ph ph-phone-call" style="color:var(--c-primary);" aria-hidden="true"></i> Commercial Emergency Hotline
+              </h3>
+              <p style="margin-bottom:var(--s-4); font-size:var(--fs-sm); color:var(--muted);">Need immediate order modification or same-day cold-chain dispatch?</p>
+              <div style="font-family:var(--font-mono); font-weight:800; font-size:1.5rem; color:var(--c-primary); margin-bottom:var(--s-2);">
                 +1 (800) 555-MEAT
               </div>
               <p style="font-size:var(--fs-xs); color:var(--muted);">Mon - Fri: 5:00 AM - 8:00 PM CST | Sat: 6:00 AM - 4:00 PM CST</p>
             </div>
 
+            <!-- Direct Channels Card (Email, Phone, Address) -->
             <div class="card" style="padding:var(--s-8);">
-              <h3 style="font-family:var(--font-display); margin-bottom:var(--s-4);"><i class="ph ph-map-pin" style="color:var(--c-accent);" aria-hidden="true"></i> Central Distribution Hub</h3>
-              <address style="font-style:normal; line-height:1.8; font-size:var(--fs-sm);">
-                <strong>PRIME Wholesale Meats &amp; Provisions</strong><br>
-                1200 Cold Chain Logistics Parkway, Gate 4<br>
-                Chicago, IL 60609<br>
-                <strong>Email:</strong> wholesale@primemeats.example<br>
-                <strong>Sample Dept:</strong> samples@primemeats.example
-              </address>
+              <h3 style="font-family:var(--font-display); margin-bottom:var(--s-6); display:flex; align-items:center; gap:var(--s-2);">
+                <i class="ph ph-buildings" style="color:var(--c-accent);" aria-hidden="true"></i> Central Distribution HQ
+              </h3>
+              
+              <div style="display:flex; flex-direction:column; gap:var(--s-4); font-size:var(--fs-sm);">
+                <div style="display:flex; gap:var(--s-3); align-items:flex-start;">
+                  <i class="ph ph-map-pin" style="font-size:1.3rem; color:var(--c-primary); flex-shrink:0; margin-top:2px;" aria-hidden="true"></i>
+                  <div>
+                    <strong>Distribution Address:</strong><br>
+                    PRIME Wholesale Meats &amp; Provisions<br>
+                    1200 Cold Chain Logistics Parkway, Gate 4<br>
+                    Chicago, IL 60609, USA
+                  </div>
+                </div>
+
+                <div style="display:flex; gap:var(--s-3); align-items:center;">
+                  <i class="ph ph-envelope-simple" style="font-size:1.3rem; color:var(--c-primary); flex-shrink:0;" aria-hidden="true"></i>
+                  <div>
+                    <strong>Commercial Inquiries:</strong> <a href="mailto:wholesale@primemeats.example" style="color:var(--c-primary); font-weight:600;">wholesale@primemeats.example</a><br>
+                    <strong>Sample Requests:</strong> <a href="mailto:samples@primemeats.example" style="color:var(--c-primary); font-weight:600;">samples@primemeats.example</a>
+                  </div>
+                </div>
+
+                <div style="display:flex; gap:var(--s-3); align-items:center;">
+                  <i class="ph ph-phone" style="font-size:1.3rem; color:var(--c-primary); flex-shrink:0;" aria-hidden="true"></i>
+                  <div>
+                    <strong>Direct Office Line:</strong> +1 (312) 555-0199
+                  </div>
+                </div>
+              </div>
+
+              <!-- Social Media Icons Section -->
+              <div style="margin-top:var(--s-6); padding-top:var(--s-6); border-top:1px solid var(--line);">
+                <h4 style="font-size:var(--fs-xs); font-family:var(--font-body); text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:var(--s-3);">Connect With Our Meat Specialists</h4>
+                <div class="footer-social">
+                  <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo" aria-hidden="true"></i></a>
+                  <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo" aria-hidden="true"></i></a>
+                  <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo" aria-hidden="true"></i></a>
+                  <a href="#" aria-label="Twitter X"><i class="ph ph-x-logo" aria-hidden="true"></i></a>
+                  <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo" aria-hidden="true"></i></a>
+                </div>
+              </div>
             </div>
+
           </div>
 
         </div>
+
+        <!-- LOGISTICS LOCATION MAP EMBED -->
+        <div class="card" style="margin-top:var(--s-10); padding:var(--s-6); overflow:hidden;">
+          <h3 style="font-family:var(--font-display); margin-bottom:var(--s-4); display:flex; align-items:center; gap:var(--s-2);">
+            <i class="ph ph-map-trifold" style="color:var(--c-primary);" aria-hidden="true"></i> Distribution Center &amp; Cold Storage Logistics Map
+          </h3>
+          <div style="width:100%; height:340px; border-radius:var(--radius); overflow:hidden; border:1px solid var(--line);">
+            <iframe 
+              title="PRIME Wholesale Meats Chicago Distribution Hub"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11894.256247942698!2d-87.66258905!3d41.81938555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c56a88b50e3%3A0x6a0f44383c21a4f0!2sChicago%2C%20IL%2060609!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
       </div>
     </section>
   </main>
 
+  <!-- ============================ FOOTER ============================ -->
   <footer class="site-footer">
     <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col--brand">
+          <a class="brand" href="index.html" aria-label="PRIME Wholesale Meats">
+            <img class="brand__logo" src="assets/images/prime-wholesale-logo.svg" alt="PRIME Wholesale Meats" width="200" height="44">
+          </a>
+          <p class="footer-tagline">
+            Direct-from-farm wholesale supplier of Beef, Pork, Mutton, Chicken, Fish, and Rabbit. USDA &amp; HACCP Certified.
+          </p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo" aria-hidden="true"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Twitter X"><i class="ph ph-x-logo" aria-hidden="true"></i></a>
+            <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo" aria-hidden="true"></i></a>
+          </div>
+          <div class="footer-badges" style="margin-top:var(--s-2);">
+            <span class="badge"><i class="ph ph-seal-check" aria-hidden="true"></i> USDA Inspected</span>
+            <span class="badge"><i class="ph ph-snowflake" aria-hidden="true"></i> Cold-Chain Certified</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Protein Catalog</h4>
+          <ul class="footer-links">
+            <li><a href="products.html?type=beef">USDA Prime Beef</a></li>
+            <li><a href="products.html?type=pork">Heritage Farm Pork</a></li>
+            <li><a href="products.html?type=mutton">Farm Mutton &amp; Lamb</a></li>
+            <li><a href="products.html?type=chicken">Free-Range Chicken</a></li>
+            <li><a href="products.html?type=fish">Fresh Ocean Fish</a></li>
+            <li><a href="products.html?type=rabbit">Dressed Farm Rabbit</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Wholesale Services</h4>
+          <ul class="footer-links">
+            <li><a href="calculator.html">Bulk Order Calculator</a></li>
+            <li><a href="about.html">Cold Storage Facility</a></li>
+            <li><a href="contact.html">B2B Quote Request</a></li>
+            <li><a href="login.html">Buyer Account Portal</a></li>
+            <li><a href="register.html">Register Commercial Account</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Distribution HQ</h4>
+          <address class="footer-address">
+            <strong>PRIME Wholesale Meats HQ</strong><br>
+            1200 Cold Chain Logistics Pkwy<br>
+            Chicago, IL 60609<br>
+            <strong>Hotline:</strong> +1 (800) 555-MEAT<br>
+            <strong>Email:</strong> wholesale@primemeats.example
+          </address>
+        </div>
+      </div>
+
       <div class="footer-bottom">
         <p>&copy; <span data-year>2026</span> PRIME Wholesale Meats &amp; Provisions Inc. All rights reserved.</p>
       </div>
