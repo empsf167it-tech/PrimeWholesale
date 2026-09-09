@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="utf-8">
@@ -16,15 +16,13 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-  <link rel="stylesheet" href="assets/css/style.css?v=1.0.1">
+  <link rel="stylesheet" href="assets/css/style.css?v=1.0.2">
 
   <script>
     (function () {
       try {
-        var stored = localStorage.getItem('prime-meat-theme');
-        var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        document.documentElement.setAttribute('data-theme', stored || (dark ? 'dark' : 'light'));
-      } catch (e) {}
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } catch (e) { }
     })();
   </script>
 
@@ -56,7 +54,8 @@
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="PRIME Wholesale Meats — home">
-        <img class="brand__logo" src="assets/images/prime-wholesale-logo.svg" alt="PRIME Wholesale Meats" width="220" height="48">
+        <img class="brand__logo" src="assets/images/prime-wholesale-logo.svg" alt="PRIME Wholesale Meats" width="220"
+          height="48">
       </a>
 
       <nav class="nav" id="primaryNav" aria-label="Primary Navigation">
@@ -71,22 +70,11 @@
           <li><a class="nav__link" href="contact.html">B2B Contact</a></li>
         </ul>
         <div class="nav__drawer-actions">
-          <div class="nav__drawer-theme">
-            <span>Appearance</span>
-            <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">
-              <i class="ph ph-sun" aria-hidden="true"></i>
-              <i class="ph ph-moon" aria-hidden="true"></i>
-            </button>
-          </div>
           <a class="btn btn--primary btn--block" href="login.html">Buyer Login</a>
         </div>
       </nav>
 
       <div class="header-actions">
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">
-          <i class="ph ph-sun" aria-hidden="true"></i>
-          <i class="ph ph-moon" aria-hidden="true"></i>
-        </button>
         <a class="btn btn--primary btn--sm" href="login.html">Buyer Portal</a>
         <button class="hamburger" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false"
           aria-controls="primaryNav">
@@ -110,7 +98,8 @@
             Direct-From-Farm <em>Wholesale Meats, Seafood &amp; Game</em>.
           </h1>
           <p class="lead hero__text fade-up fade-up--3">
-            Supplying premium bulk cuts of <strong>Pork, Beef, Fish, Rabbit, Mutton, and Chicken</strong> to top restaurants, supermarket chains, hotels, and commercial butcher shops with guaranteed cold-chain delivery.
+            Supplying premium bulk cuts of <strong>Pork, Beef, Fish, Rabbit, Mutton, and Chicken</strong> to top
+            restaurants, supermarket chains, hotels, and commercial butcher shops with guaranteed cold-chain delivery.
           </p>
           <div class="hero__actions fade-up fade-up--4">
             <a class="btn btn--primary" href="products.html">
@@ -120,14 +109,14 @@
               <i class="ph ph-calculator" aria-hidden="true"></i> Bulk Freight Calculator
             </a>
           </div>
-          
+
         </div>
 
         <div class="hero__media fade-up fade-up--3">
           <img class="hero__photo" src="assets/images/hero-meat-wholesale.jpg"
             alt="State-of-the-art refrigerated wholesale butchery warehouse with prime beef and pork cuts" width="900"
             height="1125" fetchpriority="high">
-          
+
         </div>
       </div>
     </section>
@@ -178,7 +167,8 @@
         <div class="section-head text-center">
           <span class="eyebrow"><i class="ph ph-package" aria-hidden="true"></i> Complete Protein Supply</span>
           <h2 id="categories-title">Our Wholesale Meat, Seafood &amp; Game Lineup</h2>
-          <p>We supply 6 primary commercial protein lines with custom primal cuts, vacuum sealing, and temperature-controlled packaging.</p>
+          <p>We supply 6 primary commercial protein lines with custom primal cuts, vacuum sealing, and
+            temperature-controlled packaging.</p>
         </div>
 
         <div class="grid grid--3">
@@ -187,7 +177,8 @@
             <img class="category-card__img" src="assets/images/category-beef.jpg" alt="USDA Prime Wagyu Beef Cuts">
             <div class="category-card__content">
               <h3 class="category-card__title">🥩 USDA Prime &amp; Wagyu Beef</h3>
-              <p class="category-card__cuts">Primals: Ribeye, Striploin, Tenderloin, Brisket, Short Ribs, Ground Beef 80/20.</p>
+              <p class="category-card__cuts">Primals: Ribeye, Striploin, Tenderloin, Brisket, Short Ribs, Ground Beef
+                80/20.</p>
               <div class="badge-meat-group">
                 <span class="moq-badge">MOQ: 50 KG</span>
                 <span class="temp-badge">Chilled -2°C</span>
@@ -200,10 +191,12 @@
 
           <!-- 2. PORK -->
           <article class="category-card reveal">
-            <img class="category-card__img" src="assets/images/category-pork.jpg" alt="Heritage Pork Loins and Belly Slabs">
+            <img class="category-card__img" src="assets/images/category-pork.jpg"
+              alt="Heritage Pork Loins and Belly Slabs">
             <div class="category-card__content">
               <h3 class="category-card__title">🐖 Heritage Farm Pork</h3>
-              <p class="category-card__cuts">Primals: Whole Pork Loin, Pork Belly Slabs, Tenderloin, St. Louis Ribs, Cutlets.</p>
+              <p class="category-card__cuts">Primals: Whole Pork Loin, Pork Belly Slabs, Tenderloin, St. Louis Ribs,
+                Cutlets.</p>
               <div class="badge-meat-group">
                 <span class="moq-badge">MOQ: 50 KG</span>
                 <span class="temp-badge">Chilled / Frozen</span>
@@ -216,42 +209,50 @@
 
           <!-- 3. MUTTON & LAMB -->
           <article class="category-card reveal">
-            <img class="category-card__img" src="assets/images/category-mutton.jpg" alt="Farm Mutton Chops and Rack of Lamb">
+            <img class="category-card__img" src="assets/images/category-mutton.jpg"
+              alt="Farm Mutton Chops and Rack of Lamb">
             <div class="category-card__content">
               <h3 class="category-card__title">🐑 Farm Mutton &amp; Premium Lamb</h3>
-              <p class="category-card__cuts">Primals: Rack of Lamb, Mutton Chops, Bone-in Leg, Shoulder Roast, Diced Mutton.</p>
+              <p class="category-card__cuts">Primals: Rack of Lamb, Mutton Chops, Bone-in Leg, Shoulder Roast, Diced
+                Mutton.</p>
               <div class="badge-meat-group">
                 <span class="moq-badge">MOQ: 30 KG</span>
                 <span class="temp-badge">Fresh -2°C</span>
               </div>
               <div style="margin-top:var(--s-4);">
-                <a class="btn btn--ghost btn--sm btn--block" href="products.html?type=mutton">View Mutton Cuts &rarr;</a>
+                <a class="btn btn--ghost btn--sm btn--block" href="products.html?type=mutton">View Mutton Cuts
+                  &rarr;</a>
               </div>
             </div>
           </article>
 
           <!-- 4. CHICKEN -->
           <article class="category-card reveal">
-            <img class="category-card__img" src="assets/images/category-chicken.jpg" alt="Fresh Whole Farm Raised Chicken">
+            <img class="category-card__img" src="assets/images/category-chicken.jpg"
+              alt="Fresh Whole Farm Raised Chicken">
             <div class="category-card__content">
               <h3 class="category-card__title">🐓 Free-Range Chicken &amp; Poultry</h3>
-              <p class="category-card__cuts">Primals: Whole Dressed Broilers, Boneless Breasts, Thighs, Wings, Drumsticks.</p>
+              <p class="category-card__cuts">Primals: Whole Dressed Broilers, Boneless Breasts, Thighs, Wings,
+                Drumsticks.</p>
               <div class="badge-meat-group">
                 <span class="moq-badge">MOQ: 100 KG</span>
                 <span class="temp-badge">Chilled / IQF</span>
               </div>
               <div style="margin-top:var(--s-4);">
-                <a class="btn btn--ghost btn--sm btn--block" href="products.html?type=chicken">View Poultry Cuts &rarr;</a>
+                <a class="btn btn--ghost btn--sm btn--block" href="products.html?type=chicken">View Poultry Cuts
+                  &rarr;</a>
               </div>
             </div>
           </article>
 
           <!-- 5. FISH & SEAFOOD -->
           <article class="category-card reveal">
-            <img class="category-card__img" src="assets/images/category-fish.jpg" alt="Fresh Atlantic Salmon Fillets on Ice">
+            <img class="category-card__img" src="assets/images/category-fish.jpg"
+              alt="Fresh Atlantic Salmon Fillets on Ice">
             <div class="category-card__content">
               <h3 class="category-card__title">🐟 Ocean Fresh Fish &amp; Seafood</h3>
-              <p class="category-card__cuts">Selection: Atlantic Salmon Fillets, Yellowfin Tuna Blocks, Whole Trout, Cod Loins.</p>
+              <p class="category-card__cuts">Selection: Atlantic Salmon Fillets, Yellowfin Tuna Blocks, Whole Trout, Cod
+                Loins.</p>
               <div class="badge-meat-group">
                 <span class="moq-badge">MOQ: 25 KG</span>
                 <span class="temp-badge">Iced / Super-Frozen</span>
@@ -264,16 +265,19 @@
 
           <!-- 6. RABBIT -->
           <article class="category-card reveal">
-            <img class="category-card__img" src="assets/images/category-rabbit.jpg" alt="Select Farm Dressed Whole Rabbit">
+            <img class="category-card__img" src="assets/images/category-rabbit.jpg"
+              alt="Select Farm Dressed Whole Rabbit">
             <div class="category-card__content">
               <h3 class="category-card__title">🐇 Farm Dressed Specialty Rabbit</h3>
-              <p class="category-card__cuts">Selection: Whole Dressed Rabbit, Rabbit Saddle Cuts, Hind Legs, Boneless Loins.</p>
+              <p class="category-card__cuts">Selection: Whole Dressed Rabbit, Rabbit Saddle Cuts, Hind Legs, Boneless
+                Loins.</p>
               <div class="badge-meat-group">
                 <span class="moq-badge">MOQ: 20 KG</span>
                 <span class="temp-badge">Vacuum Frozen</span>
               </div>
               <div style="margin-top:var(--s-4);">
-                <a class="btn btn--ghost btn--sm btn--block" href="products.html?type=rabbit">View Specialty Game &rarr;</a>
+                <a class="btn btn--ghost btn--sm btn--block" href="products.html?type=rabbit">View Specialty Game
+                  &rarr;</a>
               </div>
             </div>
           </article>
@@ -296,14 +300,16 @@
             <i class="ph ph-certificate" aria-hidden="true"></i>
             <div>
               <h4>USDA &amp; HACCP Certified</h4>
-              <p>100% inspection compliance, full lot code traceability, and bio-security protocols on every shipment.</p>
+              <p>100% inspection compliance, full lot code traceability, and bio-security protocols on every shipment.
+              </p>
             </div>
           </div>
           <div class="cold-chain-item">
             <i class="ph ph-scales" aria-hidden="true"></i>
             <div>
               <h4>Direct Farm Contracting</h4>
-              <p>Sourced directly from verified sustainable livestock ranches and ocean fisheries without intermediaries.</p>
+              <p>Sourced directly from verified sustainable livestock ranches and ocean fisheries without
+                intermediaries.</p>
             </div>
           </div>
         </div>
@@ -316,7 +322,8 @@
         <div class="section-head text-center">
           <span class="eyebrow"><i class="ph ph-chart-line-up" aria-hidden="true"></i> Commercial Pricing</span>
           <h2 id="tiers-title">Wholesale Volume Discount Schedule</h2>
-          <p>Transparent bulk tier pricing structure designed for commercial kitchens, supermarkets, and distributors.</p>
+          <p>Transparent bulk tier pricing structure designed for commercial kitchens, supermarkets, and distributors.
+          </p>
         </div>
 
         <div class="table-wrap reveal">
@@ -373,7 +380,9 @@
               <i class="ph ph-caret-down" aria-hidden="true"></i>
             </button>
             <div class="accordion__content" hidden>
-              <p>Our minimum order starts at 20 KG for specialty dressed rabbit, 25 KG for fresh fish, 30 KG for mutton/lamb, 50 KG for beef and pork loins, and 100 KG for chicken. Mixed protein orders can be combined to meet freight minimums.</p>
+              <p>Our minimum order starts at 20 KG for specialty dressed rabbit, 25 KG for fresh fish, 30 KG for
+                mutton/lamb, 50 KG for beef and pork loins, and 100 KG for chicken. Mixed protein orders can be combined
+                to meet freight minimums.</p>
             </div>
           </div>
 
@@ -384,7 +393,9 @@
               <i class="ph ph-caret-down" aria-hidden="true"></i>
             </button>
             <div class="accordion__content" hidden>
-              <p>All orders are packaged in thermal insulated containers with dry ice or gel packs and transported via our specialized cold-chain refrigerated trucks maintaining -18°C for frozen cuts and -2°C to 0°C for fresh chilled meats.</p>
+              <p>All orders are packaged in thermal insulated containers with dry ice or gel packs and transported via
+                our specialized cold-chain refrigerated trucks maintaining -18°C for frozen cuts and -2°C to 0°C for
+                fresh chilled meats.</p>
             </div>
           </div>
 
@@ -394,7 +405,9 @@
               <i class="ph ph-caret-down" aria-hidden="true"></i>
             </button>
             <div class="accordion__content" hidden>
-              <p>Yes! Our master butcher team offers precision portion control, custom steak thickness (e.g. 1.5" Wagyu Ribeye cut), bone-in/boneless trimming, vacuum skin packaging (VSP), and private label boxing for commercial accounts.</p>
+              <p>Yes! Our master butcher team offers precision portion control, custom steak thickness (e.g. 1.5" Wagyu
+                Ribeye cut), bone-in/boneless trimming, vacuum skin packaging (VSP), and private label boxing for
+                commercial accounts.</p>
             </div>
           </div>
         </div>
@@ -409,10 +422,12 @@
       <div class="footer-grid">
         <div class="footer-col footer-col--brand">
           <a class="brand" href="index.html" aria-label="PRIME Wholesale Meats">
-            <img class="brand__logo" src="assets/images/prime-wholesale-logo.svg" alt="PRIME Wholesale Meats" width="200" height="44">
+            <img class="brand__logo" src="assets/images/prime-wholesale-logo.svg" alt="PRIME Wholesale Meats"
+              width="200" height="44">
           </a>
           <p class="footer-tagline">
-            Direct-from-farm wholesale supplier of Beef, Pork, Mutton, Chicken, Fish, and Rabbit. USDA &amp; HACCP Certified.
+            Direct-from-farm wholesale supplier of Beef, Pork, Mutton, Chicken, Fish, and Rabbit. USDA &amp; HACCP
+            Certified.
           </p>
           <div class="footer-social">
             <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo" aria-hidden="true"></i></a>

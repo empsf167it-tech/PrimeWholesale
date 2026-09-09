@@ -10,46 +10,17 @@
   const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 
   /* ------------------------------------------------------------------
-     1. Theme toggle — persists in localStorage, defaults to OS setting
+     1. Theme — locked to dark mode
      ------------------------------------------------------------------ */
   const THEME_KEY = 'prime-meat-theme';
 
-  function readStoredTheme() {
-    try {
-      return localStorage.getItem(THEME_KEY);
-    } catch (err) {
-      return null;
-    }
-  }
-
-  function storeTheme(value) {
-    try {
-      localStorage.setItem(THEME_KEY, value);
-    } catch (err) {
-      /* Storage unavailable (private mode) — theme still applies for this visit. */
-    }
-  }
-
-  function applyTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    $$('[data-theme-toggle]').forEach((btn) => {
-      btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
-      btn.setAttribute('aria-pressed', String(theme === 'dark'));
-    });
-  }
-
   function initTheme() {
-    const stored = readStoredTheme();
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    applyTheme(stored || (prefersDark ? 'dark' : 'light'));
-
-    $$('[data-theme-toggle]').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        applyTheme(next);
-        storeTheme(next);
-      });
-    });
+    document.documentElement.setAttribute('data-theme', 'dark');
+    try {
+      localStorage.setItem(THEME_KEY, 'dark');
+    } catch (err) {
+      /* Storage unavailable (private mode) */
+    }
   }
 
   /* ------------------------------------------------------------------

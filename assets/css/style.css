@@ -2056,9 +2056,12 @@ strong { font-weight: var(--fw-ui); color: var(--text); }
 .brand__logo {
   height: 48px;
   width: auto;
-  transition: opacity var(--speed) var(--ease);
+  transition: opacity var(--speed) var(--ease), filter var(--speed) var(--ease);
 }
 .brand__logo:hover { opacity: 0.9; }
+[data-theme="dark"] .brand__logo {
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.6));
+}
 
 /* Protein Badges & Filter Tabs */
 .protein-tags {
